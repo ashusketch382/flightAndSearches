@@ -7,6 +7,31 @@ class CityRepository {
             return city;
         }
         catch (error){
+            console.log("something went wrong");
+            throw(error);
+        }
+    }
+
+    async getCity(cityId){
+        try {
+            const city = await City.findByPk(cityId);
+            return city;
+        } catch (error) {
+            console.log("something went wrong");
+            throw(error);
+        }
+    }
+
+    async updateCity(cityId, data){
+        try {
+            const city = await City.update(data, {
+                where: {
+                    id: cityId
+                }
+            });
+            return city;
+        } catch (error) {
+            console.log("something went wrong");
             throw(error);
         }
     }
@@ -18,8 +43,10 @@ class CityRepository {
                     id: cityId
                 }
             });
+            return true;
         }
         catch(error){
+            console.log("something went wrong");
             throw(error);
         }
     }
