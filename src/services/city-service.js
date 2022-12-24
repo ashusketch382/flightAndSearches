@@ -23,7 +23,7 @@ class CityService {
         }
     }
 
-    async updateCity(data, cityId){
+    async updateCity(cityId, data){
         try {
             const city = await this.cityRepository.updateCity(cityId, data);
             return city;
