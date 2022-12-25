@@ -10,14 +10,14 @@ const create = async (req, res) =>{
             success: true,
             message: "succcessfully created city",
             err: {}
-        })
+        });
     } catch (error) {
         return res.status(500).json({
             data: {},
             success:false,
             message: "Couldn't create a city",
             err: error
-        })
+        });
         
     }
 }
@@ -30,14 +30,14 @@ const get = async (req, res) =>{
             success: true,
             message: "successfully fetched a city",
             err: {}
-        })
+        });
     } catch (error) {
         return res.status(500).json({
             data: {},
             success:false,
             message: "couldn't fetched a city",
             err: error
-        })
+        });
     }
 }
 
@@ -49,14 +49,14 @@ const update = async (req, res) =>{
             success: true,
             message: "successfully updated a city",
             err: {}
-        })
+        });
     } catch (error) {
         return res.status(500).json({
             data: {},
             success: false,
             message: "couldn't update the city",
             err: error
-        })
+        });
     }
 }
 
@@ -68,14 +68,14 @@ const destroy = async (req, res) =>{
             success: true,
             message: "successfully deleted a city",
             err: {}
-        })
+        });
     } catch (error) {
         return res.status(500).json({
             data: {},
             success: false,
             message: "couldn't delete the city",
             err: error
-        })
+        });
     }
 }
 
