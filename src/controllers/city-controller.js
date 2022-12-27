@@ -80,7 +80,7 @@ const destroy = async (req, res) =>{
 }
 const getAll = async(req,res) => {
     try {
-        const cities = await cityService.getAllCity();
+        const cities = await cityService.getAllCity(req.query);
         return res.status(200).json({
             data: cities,
             sucess: true,
