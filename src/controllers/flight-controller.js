@@ -23,7 +23,7 @@ const create = async (req,res) => {
 
 const getAll = async (req,res) => {
     try {
-        const response = flightService.getAllFlightData(req.query);
+        const response = await flightService.getAllFlightData(req.query);
         return res.status(200).json({
             data: response,
             message: "successfully fetched all cities",
