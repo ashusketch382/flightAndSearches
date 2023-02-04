@@ -17,8 +17,7 @@ const setupAndStartServer = async () => {
 
     app.listen(PORT, async () => {
         console.log(`server started on port ${PORT}`);
-        console.log(PORT);
-        
+        // db.sequelize.sync({ alter:true });
         // const newAirplane = await Airplane.create({
         //     modelNumber: "Boeing 737"
         // });
